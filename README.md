@@ -33,7 +33,7 @@ video-annotation-project
 2. **Install dependencies**:
 
    ```
-   npm install
+   pnpm install
    ```
 
 3. **Configure Google Cloud**:
@@ -46,10 +46,15 @@ video-annotation-project
 
 ## Usage
 
-To annotate the videos in the `input-videos` directory, run the following command:
+To annotate the videos in the bucket, run the following command:
 
 ```
-node src/annotate.js
+pnpm start
+```
+
+To upload files to bucket:
+```sh
+gsutil cp -r  /Volumes/GBT\ FILES/Video\ Editing/LETCHWORTH/Pyromany\ Letchworth  gs://gbt-test-bucket
 ```
 
 The annotated videos will be saved in the `output-videos` directory with their original filenames.
