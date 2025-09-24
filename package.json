@@ -1,0 +1,33 @@
+{
+  "name": "video-annotation-project",
+  "version": "1.0.0",
+  "description": "A project to annotate videos using Google Cloud's Video Intelligence API.",
+  "type": "module",
+  "main": "dist/annotate.js",
+  "scripts": {
+    "start": "pnpm build && pnpm exec node dist/annotate.js",
+    "build": "pnpm run build:ts",
+    "build:ts": "pnpm exec tsc --build",
+    "dev:ts": "pnpm exec tsc --build --watch",
+    "dev": "pnpm exec tsx src/annotate.ts",
+    "format": "pnpm exec prettier '**/*.{json,ts,yaml,md}' --write"
+  },
+  "keywords": [
+    "video",
+    "annotation",
+    "google-cloud"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^7.17.1",
+    "@google-cloud/video-intelligence": "^6.2.0",
+    "fs-extra": "^10.0.0",
+    "type-fest": "^5.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.0.0"
+  }
+}
