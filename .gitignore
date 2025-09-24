@@ -32,3 +32,4 @@ Thumbs.db
 # Input and output directories
 input-videos/
 output-videos/
+annotation-data/

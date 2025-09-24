@@ -17,7 +17,7 @@ export async function saveAnnotatedVideo(
   data: string,
 ): Promise<void> {
   try {
-    const outputPath = path.join(outputDir, filename);
+    const outputPath = path.resolve(path.join(outputDir, filename));
     await fs.writeFile(outputPath, data);
     console.log(`Annotated video saved to: ${outputPath}`);
   } catch (error) {
